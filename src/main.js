@@ -2,8 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-// Globally import the CSS file
-import './assets/main.css'
+// Globally import the SCSS file
+import './assets/styles/style.scss'
 
 const app = createApp(App)
 

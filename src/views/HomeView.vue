@@ -1,5 +1,4 @@
 <template>
-  <h1>Home</h1>
       <div class="splash-container">
         <div class="splash">+
           

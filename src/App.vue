@@ -55,11 +55,9 @@ export default {
       }
   },
   methods: {
-    addToCart(name, i) {
+    addToCart(name, quantity) {
       if (!this.cart[name]) this.cart[name] = 0
-      this.cart[name] += this.inventory[i].quantity
-      console.log(this.cart)
-      this.inventory[i].quantity = 0
+      this.cart[name] += quantity
     },
     toggleSidebar() {
       this.showSidebar = !this.showSidebar

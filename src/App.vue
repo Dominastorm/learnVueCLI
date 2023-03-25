@@ -22,7 +22,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
   </header>
 
-  <RouterView :inventory="inventory"/>
+  <RouterView :inventory="inventory" :addToCart="addToCart"/>
 
   <SideBar
     v-if="showSidebar"
@@ -56,9 +56,7 @@ export default {
   },
   methods: {
     addToCart(name, i) {
-      if (!this.cart[name]) {
-        this.cart[name] = 0
-      }
+      if (!this.cart[name]) this.cart[name] = 0
       this.cart[name] += this.inventory[i].quantity
       console.log(this.cart)
       this.inventory[i].quantity = 0
